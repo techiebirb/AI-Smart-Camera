@@ -1,0 +1,9 @@
+livevideos/
+__pycache__/
+samplevideos/
+sendemail.py
+test.py
+testiphonecam.py
+testvideo.py
+twiliotest.py
+.env
