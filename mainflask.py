@@ -39,7 +39,6 @@ def check_videos():
 # Schedule auto delete
 # Manual delte video
 # video auto continuing
-# Run on raspbery pi
 
 @app.route('/video_feed')
 def video_feed():

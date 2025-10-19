@@ -1,0 +1,9 @@
+flask
+celery
+brevo_python
+opencv-python
+APScheduler
+python-dotenv
+google-genai
+gunicorn
+pandas

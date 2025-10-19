@@ -7,3 +7,4 @@ testiphonecam.py
 savevideo.py
 twiliotest.py
 .env
+venv/
