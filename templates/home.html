@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<img src="{{ url_for('video_feed') }}">
+
+<div class="row justify-content-center">
+	<div class="col-12 col-md-10 col-lg-8">
+		<div class="card shadow-sm mb-4">
+			<div class="card-body">
+				<h5 class="card-title">Live Feed</h5>
+				<p class="text-muted small">This is the live stream from your camera. Click history to review recorded clips.</p>
+				<div class="ratio ratio-16x9 mb-3">
+					<img src="{{ url_for('video_feed') }}" alt="Live feed" class="w-100 h-100 object-fit-cover">
+				</div>
+				<a href="/history" class="btn btn-primary">View Video History</a>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}

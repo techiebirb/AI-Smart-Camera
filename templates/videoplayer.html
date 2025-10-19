@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+                <h5 class="card-title mb-0">{{ videoid }}</h5>
+                <p class="small text-muted mb-0">Recorded clip</p>
+            </div>
+            <a href="/history" class="btn btn-sm btn-outline-secondary">Back to History</a>
+        </div>
+
+        <div class="ratio ratio-16x9">
+            <video controls autoplay playsinline>
+                <source src="{{ url_for('static', filename='livevideos/'+videoid) }}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div class="card-footer text-muted small">If this clip is suspicious, it will be flagged.</div>
+</div>
+
+{% endblock %}

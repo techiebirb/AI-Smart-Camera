@@ -1,0 +1,42 @@
+:root{
+	--bs-primary: #0d6efd; /* keep bootstrap primary sensible */
+}
+
+/* Card subtle hover and transition */
+.video-card{
+	transition: transform .18s ease, box-shadow .18s ease;
+}
+.video-card:hover{
+	transform: translateY(-6px);
+	box-shadow: 0 10px 20px rgba(13,110,253,0.12);
+}
+
+/* Ensure video/thumbnail fills card area */
+.video-card .ratio video,
+.video-card .ratio img{
+	object-fit: cover;
+}
+
+/* Truncate long filenames nicely */
+.card-title.text-truncate{
+	max-width: 100%;
+}
+
+/* Improve footer contrast on light background */
+footer{
+	background: transparent;
+}
+
+/* Small screens: tighten spacing */
+@media (max-width: 576px){
+	.navbar-brand{font-size:1rem}
+}
+
+/* Accessibility: focus outline for keyboard users */
+.btn:focus{
+	box-shadow: 0 0 0 .2rem rgba(13,110,253,0.25);
+}
+
+/* Minor utility for object-fit fallback */
+.object-fit-cover{object-fit:cover}
+
