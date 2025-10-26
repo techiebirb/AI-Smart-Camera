@@ -16,17 +16,18 @@
                 <p class="card-text text-muted small mb-2">Recorded clip</p>
                 <div class="mt-auto d-flex justify-content-between align-items-center">
                     <a href="/videoplayer?videoid={{ video }}" class="btn btn-sm btn-primary">View</a>
-                    {% if video in videostatuses %}
-                        <span class="badge text-bg-secondary">Processing...</span>
+                    {% if video not in videostatuses %}
+                    <span class="badge text-bg-secondary">Processing...</span>
                     {% else %}
-                        {% if videostatuses[video] == True %}
+                        {% if videostatuses[video][0] == True %}
                             <span class="badge text-bg-danger">Suspicious</span>
-                        {% elif videostatuses[video] == False %}
+                        {% elif videostatuses[video][0] == False %}
                             <span class="badge text-bg-success">Normal</span>
-                        {% elif videostatuses[video] == "Custom" %}
+                        {% elif videostatuses[video][0] == "Custom" %}
                             <span class="badge text-bg-info">Custom</span>
-                        {% endif %}
+                        {% else %}
                             <span class="badge text-bg-warning">Error</span>
+                        {% endif %}
                     {% endif %}
                 </div>
             </div>

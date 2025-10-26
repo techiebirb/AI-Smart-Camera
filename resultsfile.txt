@@ -34,5 +34,17 @@
     "output8.webm": [
         false,
         ""
+    ],
+    "output9.webm": [
+        false,
+        ""
+    ],
+    "output10.webm": [
+        false,
+        ""
+    ],
+    "output11.webm": [
+        false,
+        ""
     ]
 }

@@ -30,11 +30,6 @@ def gen(camera):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
-def check_videos():
-    resultsfilevc = open("resultsfile.txt","r")
-    videostatusesvc = json.loads(resultsfilevc.read())
-    resultsfilevc.close()
-
 # Mark as not suspicous/suspicous button
 # Schedule auto delete
 # Manual delte video
@@ -52,6 +47,7 @@ def history():
     videostatuses = {}
     resultsfile = open("resultsfile.txt","r")
     videostatuses = json.loads(resultsfile.read())
+    print(videostatuses)
     resultsfile.close()
     return render_template("history.html", videols=videols, videostatuses=videostatuses)
 
