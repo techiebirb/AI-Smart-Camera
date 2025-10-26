@@ -8,3 +8,4 @@ savevideo.py
 twiliotest.py
 .env
 venv/
+resultsfile.txt
