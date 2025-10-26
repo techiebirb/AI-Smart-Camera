@@ -56,17 +56,18 @@ class Camera:
                             if time.time()-self.lastemailsent <= 60:
                                 print("It is too early to send an email.")
                             else:
-                                email = SendSmtpEmail(
-                                    sender={"name": "AI Camera", "email": "tahsanh12345@gmail.com"},
-                                    to=[{"email": "tahsanh12345@gmail.com", "name": "Tahsan"}],
-                                    subject="Suspicious Activity Detected",
-                                    html_content="<p>Dear user, <br>Suspicious activity has been detected. Go check it out.</p>"
-                                )
+                                print("PRETEND AN EMAIL IS SENT.")
+                                # email = SendSmtpEmail(
+                                #     sender={"name": "AI Camera", "email": "tahsanh12345@gmail.com"},
+                                #     to=[{"email": "tahsanh12345@gmail.com", "name": "Tahsan"}],
+                                #     subject="Suspicious Activity Detected",
+                                #     html_content="<p>Dear user, <br>Suspicious activity has been detected. Go check it out.</p>"
+                                # )
 
-                                api = TransactionalEmailsApi(ApiClient(self.cfg))
-                                resp = api.send_transac_email(email)
-                                self.lastemailsent = time.time()
-                                print(f"Email sent! messageId: {resp.message_id}")
+                                # api = TransactionalEmailsApi(ApiClient(self.cfg))
+                                # resp = api.send_transac_email(email)
+                                # self.lastemailsent = time.time()
+                                # print(f"Email sent! messageId: {resp.message_id}")
                         except:
                             print("There was an error sending the email.")
                     elif "no" in result.lower():
