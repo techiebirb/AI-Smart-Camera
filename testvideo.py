@@ -24,7 +24,7 @@ class Camera:
         self.videoresults = []
         self.videoresulttracker = -1
 
-        self.videosegmentlength = 15
+        self.videosegmentlength = 30
 
         self.cfg = Configuration()
         self.cfg.api_key['api-key'] = os.environ.get("BREVO_API_KEY")
