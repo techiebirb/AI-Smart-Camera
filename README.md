@@ -1,0 +1,16 @@
+# AI Smart Camera
+
+## What is it?
+My app allows the user to connect their own pre-existing security camera to this application so that the video feed can be processed by Google's Gemini API. It will also store video recordings from the security camera and mark them as suspicious if Gemini detects that there is some suspicious activity happening in that segment of the video feed. That way, as long as the app is running on a machine connected to power and the internet, such as a Raspberry Pi, the user can view the website for the Camera feed from anywhere as long as they have internet access. The user can also see which videos are marked as suspicious and normal and connect an email so that they get emailed every time suspicious activity is detected. Finally, the app is coded in a way so that if the machine that the main server is running on gets disconnected from power of wifi, it will automatically continue with making new clips without disturbing the old ones.
+
+## Inspiration
+I was inspired to create this app because I live in New York City, where there can be a lot of unexpected crimes, depending on where you live. There are so many things that happen daily, whether it be a dangerous weapon someone is carrying, a person trying to steal something, and more, so I decided to use AI and coding to my advantage and make a project that could help solve this. With Gemini API's video understanding feature, it is now possible for video clips to be sent to Gemini and processed for results based on the video in real time, so I implemented this with camera feed in a way that it can alert the user and the user can look back on the suspiciously marked videos. Overall, I wanted to make an app that I thought would be useful in keeping my community and other communities safe.
+
+## Technical Difficulties
+A technical difficulty I faced while programming this app is that I couldn't figure out why my Raspberry Pi wouldn't run the server's code properly and connect to my security camera. Eventually, I figured out that the problem was that my Raspberry Pi was stuck on 2.4 GHz wifi, and wouldn't connect to my 5 GHz wifi since it didn't have support for 5GHz, which is what my camera was on. I solved this problem by switching the Raspberry Pi for a newer one that had support for 5 GHz, and my code started working again.
+
+## Things to Add if I Could Make Version 2.0
+If I were to add a 2.0 version of my app, I would add support for text notifications, automatic unnecessary video deletion to save storage space, a more user-friendly and accessible way of installing the server program, and also have Gemini able to provide descriptions for the video clip that it perceives as suspicious.
+
+## Something I learned from the Congressional App Challenge
+One thing that I learned from the Congressional App Challenge is that it is important to take time to think over your app and manage your time. Even though the deadline seems very far, it is important to remember that you have lots of other things to do, so time can fly very fast. For me, I had a lot of school work to do, so I didn’t have enough time to do some of the few things that I would have done if I could make version 2.0 of my app.
