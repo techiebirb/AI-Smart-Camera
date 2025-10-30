@@ -12,10 +12,6 @@ app_path = os.path.join(os.path.dirname(__file__), '.')
 dotenv_path = os.path.join(app_path, '.env')
 load_dotenv(dotenv_path)
 
-# RESETTING STUFF
-shutil.rmtree("static/livevideos")
-os.makedirs("static/livevideos")
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -33,7 +29,6 @@ def gen(camera):
 # Mark as not suspicous/suspicous button
 # Schedule auto delete
 # Manual delte video
-# video auto continuing
 
 @app.route('/video_feed')
 def video_feed():
